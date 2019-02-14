@@ -12,9 +12,9 @@ function statusChangeCallback(response) {
          FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
   }
 }
-/*
+
 function changeUser(response){
   $(".facebookLogin").hide();
-  $("#name").text(response.JaclynChin);
-  $("#photo").attr("src", response./images/itme.jpg);
+  $("#name").text(response.name);
+  $('#photo').attr('src', response.picture.data.url);
 }
